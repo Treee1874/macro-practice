@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Macro Studio · Bicocca 宏观练习</title>
+ <meta name="description" content="2025–26 Bicocca 宏观经济学个人练习：37 道大题、40 道原创选择题、中文解析与综合训练。">
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23132840'/%3E%3Cpath d='M7 23V9h3l6 8 6-8h3v14h-4v-8l-5 6-5-6v8z' fill='%2348dbba'/%3E%3C/svg%3E">
+ <style>/*__STYLES__*/</style>
+</head>
+<body>
+ <header class="topbar"><div class="brand"><span class="brand-icon">M</span><div><strong>Macro Studio</strong><span>Bicocca · 2025–26 · T2</span></div></div><button id="aboutBtn" class="quiet">课程与题库说明</button></header>
+ <main class="workspace">
+  <aside class="sidebar" aria-label="练习设置">
+   <div class="intro"><span class="eyebrow">MACROECONOMIA</span><h1>把模型练清楚。</h1><p>从计算结果，到经济解释。</p></div>
+   <label for="scope">考试范围</label><select id="scope"><option value="all">综合 · 两场全部范围</option><option value="primo">Primo · 第一次期中</option><option value="secondo">Secondo · 第二次期中</option></select>
+   <div class="segmented" aria-label="题型"><button data-type="all" aria-pressed="true">全部</button><button data-type="open" aria-pressed="false">大题</button><button data-type="mcq" aria-pressed="false">选择题</button></div>
+   <p class="side-label">按章节练习</p><nav id="topics" aria-label="章节"></nav>
+   <button id="wrongBtn" class="wrong-button">待复习 <span id="wrongCount">0</span></button>
+   <div class="exam-box"><span class="eyebrow">SIMULAZIONE</span><strong>综合训练卷</strong><p>8 道选择题 + 3 道大题</p><label class="sr-only" for="duration">训练时长</label><select id="duration"><option value="60">60 分钟</option><option value="45">45 分钟</option><option value="90">90 分钟</option></select><button id="startExam">开始计时训练</button><small>原创组卷，非官方考试结构</small></div>
+   <p class="storage-note" id="storageNote">记录保存在此浏览器与设备。</p>
+  </aside>
+  <section class="study" aria-label="答题区">
+   <div class="study-heading"><div><span class="eyebrow" id="modeCaption">PRACTICE · 练习</span><h2 id="sectionTitle">全部章节</h2></div><div class="stats"><span><b id="statDone">0</b>已完成</span><span><b id="statTotal">77</b>题库题目</span></div></div>
+   <div id="examStatus" hidden></div>
+   <div class="question-bar"><label for="questionSelect" class="sr-only">选择题目</label><select id="questionSelect"></select><span id="position"></span></div>
+   <article id="question" class="question-card"></article>
+   <div class="pager"><button id="prevBtn" class="quiet">上一题</button><button id="markBtn" class="quiet">标记待复习</button><button id="nextBtn" class="quiet">下一题</button></div>
+   <p class="bottom-note">数值可用小数点或小数逗号，请勿加千位分隔符。论述与绘图按要点自评。</p>
+  </section>
+ </main>
+ <dialog id="about"><div class="dialog-top"><h2>课程与题库说明</h2><button id="closeAbout" class="quiet">关闭</button></div><p><strong>Macroeconomia e Politiche Economiche · T2</strong><br>2526-2-E3303M010-T2 · Luca Corazzini / Lucia Dalla Pellegrina</p><p>37 道大题依据两份复习资料的主题与推理方式编写；40 道选择题为原创训练。数值、措辞及部分设定作了调整，答案独立复核。本网站不是大学或教授发布的官方试题。</p><p>Primo：国民核算、商品市场、金融市场、IS–LM、劳动市场、Phillips、IS–LM–PC、Solow。Secondo：预期、开放经济、财政债务；选择题另覆盖大纲中的李嘉图等价与非常规货币政策。</p><p>官方大纲仅说明笔试，未确定选择题比例、题数或时长。网站中的计时和组卷是练习设置。</p><p>数值小问自动检查；开放论述与图形请参考解析自评，不计入选择题分数。汇率统一注明报价；百分比、百分点与小数输入按每问的单位填写。</p><p><a href="https://elearning.unimib.it/course/info.php?id=60793" target="_blank" rel="noopener">查看官方课程大纲</a></p><p>材料：Esercitazione di ripasso, I esame intermedio；Esercitazione ripasso per secondo esame intermedio – CON SOLUZIONI。网站没有上传原 PDF。</p><p>答题记录仅保存在当前浏览器。可导出备份，清理浏览器或改用其他设备时需重新导入。</p><div class="backup-actions"><button id="exportBtn" class="quiet">导出答题记录</button><label class="import-label" for="importFile">导入记录</label><input type="file" id="importFile" accept="application/json,.json" hidden></div><p id="backupMessage" role="status"></p></dialog>
+ <dialog id="confirmPanel" aria-labelledby="confirmTitle"><div class="dialog-top"><h2 id="confirmTitle"></h2></div><p id="confirmText"></p><div class="backup-actions"><button id="confirmCancel" class="quiet">继续答题</button><button id="confirmProceed">确认</button></div></dialog>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <script>/*__BANK__*/</script>
+ <script>/*__APP__*/</script>
+</body>
+</html>
